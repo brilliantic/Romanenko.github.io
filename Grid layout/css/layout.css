@@ -1,0 +1,134 @@
+
+/* Задание
+Реализуйте грид контейнер с областями: header, main-section, content-section, info-section, footer. Напишите медиа запрос для изменения отображения этих областей на разрешения меньше 768рх и 480рх. */
+
+.d-grid{
+    display: grid;
+}
+.grid-responsive{
+    grid-gap: 5px 3px;
+    text-align: center;
+    grid-template-columns: 150px repeat(3, 1fr);
+    grid-template-rows: 100px auto auto 100px;
+    grid-template-areas: 
+    "logo feedback header-menu header-menu"
+    "info-section main-section main-section main-section"
+    "info-section content-section content-section content-section"
+    "footer footer footer footer";
+    /* animation: gridAnimation 4s infinite; */
+}
+
+.grid-responsive div:nth-child(1){
+    grid-area: logo;
+}
+.grid-responsive span:nth-child(1){
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.2);
+}
+.grid-responsive div:nth-child(2){
+    grid-area: feedback;
+}
+.grid-responsive div:nth-child(3){
+    grid-area: header-menu;
+}
+.grid-responsive div:nth-child(4){
+    grid-area: main-section;
+}
+.grid-responsive div:nth-child(5){
+    grid-area: content-section;
+    padding: 5%;
+}
+.grid-responsive div:nth-child(6){
+    grid-area: info-section;
+}
+.grid-responsive div:nth-child(7){
+    grid-area: footer;
+}
+
+@keyframes gridAnimation{
+    0%{
+        grid-template-areas: 
+        "logo feedback header-menu header-menu"
+        "info-section main-section main-section main-section"
+        "info-section content-section content-section content-section"
+        "footer footer footer footer";
+    }
+    25%{
+        grid-template-areas: 
+        "logo header-menu header-menu feedback"
+        "info-section main-section main-section main-section"
+        "info-section content-section content-section content-section"
+        "footer footer footer footer";
+    }
+    50%{
+        grid-template-areas: 
+        "logo header-menu header-menu feedback"
+        "info-section content-section content-section content-section"
+        "info-section main-section main-section main-section"
+        "footer footer footer footer";
+    }
+    75%{
+        grid-template-areas: 
+        "logo header-menu header-menu feedback"
+        "content-section content-section content-section info-section"
+        "main-section main-section main-section info-section"
+        "footer footer footer footer";
+    }
+}
+
+@media (max-width: 768px){
+    .grid-responsive{
+        grid-template-columns: 100px repeat(3, 1fr);
+        grid-template-rows: 80px auto auto 80px;
+        /* grid-template-areas: 
+        "logo feedback header-menu header-menu"
+        "info-section main-section main-section main-section"
+        "info-section content-section content-section content-section"
+        "footer footer footer footer"; */
+        @keyframes gridAnimation{
+            0%{
+                grid-template-areas: 
+                "logo feedback header-menu header-menu"
+                "info-section main-section main-section main-section"
+                "info-section content-section content-section content-section"
+                "footer footer footer footer";
+            }
+            25%{
+                grid-template-areas: 
+                "logo header-menu header-menu feedback"
+                "info-section main-section main-section main-section"
+                "info-section content-section content-section content-section"
+                "footer footer footer footer";
+            }
+            50%{
+                grid-template-areas: 
+                "logo header-menu header-menu feedback"
+                "info-section content-section content-section content-section"
+                "info-section main-section main-section main-section"
+                "footer footer footer footer";
+            }
+            75%{
+                grid-template-areas: 
+                "logo header-menu header-menu feedback"
+                "content-section content-section content-section info-section"
+                "main-section main-section main-section info-section"
+                "footer footer footer footer";
+            }
+        }
+    }
+}
+@media (max-width: 480px){
+    .grid-responsive{
+        grid-gap: 0;
+        padding: 0;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 60px 60px auto auto 60px;
+        grid-template-areas: 
+        "logo header-menu header-menu"
+        "info-section info-section feedback"
+        "main-section main-section main-section"
+        "content-section content-section content-section"
+        "footer footer footer";
+        
+    }
+}
