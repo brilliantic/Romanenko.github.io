@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../Narnia"
+		},
+		{
+			"name": "brilliantic.github.io",
+			"path": "../Narnia/brilliantic.github.io"
+		},
+		{
+			"name": "brilliantic.github.io",
+			"path": "."
+		}
+	],
+	"settings": {
+		"google-translate.firstLanguage": "en",
+		"liveServer.settings.multiRootWorkspaceName": "Narnia"
+	}
+}
