@@ -1,87 +1,87 @@
 @import "_reset";
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
 header {
-  background-color: #0dd5f0;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
+    background-color: #0dd5f0;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
 }
 
 main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 0 -10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 -10px;
 }
 
 .gallery a {
-  width: calc(33.33% - 20px);
-  margin: 10px;
-  position: relative;
-  display: block;
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    position: relative;
+    display: block;
 }
 
 .gallery img {
-  width: 100%;
-  height: auto;
-  filter: grayscale(100%);
-  transition: all 0.3s ease-in-out;
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+    transition: all 0.3s ease-in-out;
 }
 
 .gallery a:hover img {
-  filter: grayscale(0%);
+    filter: grayscale(0%);
 }
 
 @media screen and (max-width: 1200px) {
-  .gallery a {
+    .gallery a {
     width: calc(50% - 20px);
-  }
+    }
 }
 
 @media screen and (max-width: 700px) {
-  .gallery a {
+    .gallery a {
     width: 100%;
-  }
+    }
 }
 
 @media screen and (max-width: 480px) {
-  header {
+    header {
     font-size: 20px;
-  }
+    }
 
-  .gallery a {
+    .gallery a {
     margin: 5px;
-  }
+    }
 }
 
 @media screen and (max-width: 380px) {
-  header {
+header {
     font-size: 16px;
-  }
+}
 }
 
 .gallery a:focus img {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50%;
-  height: auto;
-  z-index: 100;
-  filter: grayscale(0%);
-  cursor: zoom-out;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: auto;
+    z-index: 100;
+    filter: grayscale(0%);
+    cursor: zoom-out;
 }
