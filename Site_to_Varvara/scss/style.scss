@@ -7,13 +7,15 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-image: url('../Varya/logo_varya.jpeg');
-    height: 100%;
+    background-size: 100%;
     background-repeat: no-repeat;
 }
 
 header {
+    font-family: Helvetica;
     background-color: #0dd5f0;
     color: #fff;
+    text-shadow: 2px 5px 5px rgba($color: #000000, $alpha: 0.8);
     padding: 20px;
     text-align: center;
 }
