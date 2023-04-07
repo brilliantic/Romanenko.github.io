@@ -24,8 +24,13 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand logo" href="#">E-Shop</a> <!-- Logo -->
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav me-auto top-menu">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 top-menu">
 
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
@@ -41,8 +46,9 @@
                 <!-- Icons -->
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item dropdown"> <!-- User icon -->
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"><i class="far fa-user"></i></a>
-                        <ul class="dropdown-menu" >
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"><i
+                                class="far fa-user"></i></a>
+                        <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Registration &ensp;&ensp;&nbsp;<i
                                         class="fas fa-user-edit"></i></a></li>
                             <li><a class="dropdown-item" href="#">Authorization &ensp;<i
@@ -65,7 +71,7 @@
                 </ul>
 
                 <!-- Table of products in the cart -->
-                <div class="modal fade" id="modal-cart" tabindex="-1" aria-labelledby="modal-cart" aria-hidden="true">
+                <div class="modal fade" id="modal-cart" tabindex="-1" aria-hidden="true">
                     <div class="modal-dialog modal-xl">
                         <div class="modal-content">
                             <div class="modal-header bg-secondary text-white">
@@ -74,32 +80,30 @@
                                     aria-label="Close"></button>
                             </div>
 
-                            <!-- Products in the cart -->
                             <div class="modal-body">
                                 <table class="table">
                                     <tbody>
                                         <tr>
                                             <td><img src="img/products/apple_cinema_30.jpg" alt="Apple Cinema 30">
                                             </td>
-                                            <td><a href="#">Apple Cinema 30"</a></td>
-                                            <td>$499.99</td>
+                                            <td><a href="#" id="product-2">Apple Cinema 30"</a></td>
+                                            <td class="product-price">$499.99</td>
                                         </tr>
                                         <tr>
                                             <td><img src="img/products/canon_eos_5d_1.jpg" alt="Canon EOS 5D">
                                             </td>
-                                            <td>C<a href="#">anon EOS 5D</a></td>
-                                            <td>$399.99</td>
+                                            <td>C<a href="#" id="product-3">Canon EOS 5D</a></td>
+                                            <td class="product-price">$399.99</td>
                                         </tr>
                                         <tr>
                                             <td><img src="img/products/hp_1.jpg" alt="HP Printer"></td>
-                                            <td><a href="#">HP</a></td>
-                                            <td>$299.99</td>
+                                            <td><a href="#" id="product-4">HP EliteBook</a></td>
+                                            <td class="product-price">$299.99</td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
 
-                            <!-- Buttons in the cart -->
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Continue
                                     shopping</button>
@@ -108,7 +112,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </nav>
@@ -162,7 +165,7 @@
     <section class="main-content">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-sm-6 mb-3">
+                <div class="col-lg-4 col-sm-6 mb-3" id="product-1">
                     <div class="product-card">
                         <div class="product-thumb">
                             <a href="#"><img src="img/products/iphone_1.jpg" alt="iPhone"></a>
@@ -176,16 +179,16 @@
                                     <small class="h6">$249.99</small> $199.99
                                 </div>
                                 <div class="product-links">
-                                    <a href="#"><i class="fas fa-shopping-cart" 
-                                        id="add-to-cart-btn" onclick="addToCart('product-1')"></i><!-- Shopping icon --></a>
+                                    <a href="#"><i class="fas fa-shopping-cart" id="modal-cart"
+                                            onclick="addToCart('product-1')"></i><!-- Shopping icon --></a>
                                     <a href="#"><i class="far fa-heart"></i></a> <!-- Like icon -->
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
-                <div class="col-lg-4 col-sm-6 mb-3">
+
+                <div class="col-lg-4 col-sm-6 mb-3" id="product-2">
                     <div class="product-card">
                         <div class="product-thumb">
                             <a href="#"><img src="img/products/apple_cinema_30.jpg" alt="Apple Cinema 30"></a>
@@ -204,9 +207,9 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-                <div class="col-lg-4 col-sm-6 mb-3">
+
+                <div class="col-lg-4 col-sm-6 mb-3" id="product-3">
                     <div class="product-card">
                         <div class="product-thumb">
                             <a href="#"><img src="img/products/canon_eos_5d_1.jpg" alt="Canon EOS 5D"></a>
@@ -226,9 +229,9 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-                <div class="col-lg-4 col-sm-6 mb-3">
+
+                <div class="col-lg-4 col-sm-6 mb-3" id="product-3">
                     <div class="product-card">
                         <div class="product-thumb">
                             <a href="#"><img src="img/products/hp_1.jpg" alt="HP Laptop"></a>
@@ -248,9 +251,9 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-                <div class="col-lg-4 col-sm-6 mb-3">
+
+                <div class="col-lg-4 col-sm-6 mb-3" id="product-5">
                     <div class="product-card">
                         <div class="product-thumb">
                             <a href="#"><img src="img/products/imac_1.jpg" alt="iMac"></a>
@@ -270,9 +273,9 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-                <div class="col-lg-4 col-sm-6 mb-3">
+
+                <div class="col-lg-4 col-sm-6 mb-3" id="product-1">
                     <div class="product-card">
                         <div class="product-thumb">
                             <a href="#"><img src="img/products/iphone_1.jpg" alt="iPhone"></a>
@@ -292,7 +295,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -335,6 +337,7 @@
                             <a href="#"><i class="fab fa-instagram"></i></a>
                             <a href="#"><i class="fab fa-youtube"></i></a>
                         </div>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -346,7 +349,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-    <!-- <script src="js/script.js"></script> -->
+    <script src="js/script.js"></script>
 </body>
 
 </html>
