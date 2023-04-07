@@ -1,1 +1,0 @@
-# brilliantic.github.io
