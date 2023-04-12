@@ -35,6 +35,13 @@ a:hover {
   text-transform: uppercase;
 }
 
+.navbar-collapse {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 20%;
+}
+
 .navbar-nav .dropdown-menu {
   right: 0;
   left: auto;
@@ -233,7 +240,7 @@ a:hover {
     margin-left: 0;
   }
   .btn-remove-from-cart {
-    margin-right: 3.125rem;
+    margin-right: 0;
   }
   .counter-wrapper {
     width: 1.25rem;
@@ -402,6 +409,14 @@ a:hover {
     width: 100%;
     font-size: 18px;
   }
+  .cart-item__title {
+    margin-left: 0;
+    font-size: 18px;
+  }
+  .cart-item__top {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 .items__control {
   border-radius: 10px;
@@ -432,7 +447,7 @@ a:hover {
 }
 @media (max-width: 598px) {
   #cart-notification {
-    font-size: 18px;
+    font-size: 14px;
     height: 30px;
   }
 }
