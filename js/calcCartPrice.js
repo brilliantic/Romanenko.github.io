@@ -10,7 +10,7 @@ function calcCartPriceAndDelivery() {
 	// Загальна вартість товарів
 	let priceTotal = 0;
 	// Визначаємо вартість доставки
-	let deliveryPrice = 120; // вартість доставки за замовчуванням
+	let deliveryPrice = 120;
 	// Мін замовлення для безкоштовної доставки
 	const freeShipping = 600;
 
