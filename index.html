@@ -25,7 +25,7 @@
     <!-- Header  sticky-top-->
     <nav class="navbar navbar-expand-lg  navbar-light bg-light my-header-navbar sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand logo" href="#">Суші-гном<br>om-nom-nom</a> <!-- Logo -->
+            <a class="navbar-brand logo" href="#">Суші-Їм</a> <!-- Logo -->
 
             <!-- Burger menu -->
             <button class="my-navbar navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -54,16 +54,20 @@
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"><i
                                 class="far fa-user"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Registration &ensp;&ensp;&nbsp;<i
+                            <li><a class="dropdown-item" href="#">Реєстрація &ensp;&ensp;&nbsp;<i
                                         class="fas fa-user-edit"></i></a></li>
-                            <li><a class="dropdown-item" href="#">Authorization &ensp;<i
-                                        class="fas fa-user-plus"></i></a></li>
+                            <li><a class="dropdown-item" href="#">Авторизація &ensp;<i class="fas fa-user-plus"></i></a>
+                            </li>
                         </ul>
                     </li>
                     <li class="nav-item"> <!-- Cart icon -->
-                        <a class="nav-link item-nav-cart" href="#" data-bs-toggle="modal" data-bs-target="#modal-cart">
-                            <i class="fas fa-shopping-cart"></i>
-                        </a>
+                        <button type="button" class="nav-link item-nav-cart btn btn-light position-relative" data-bs-toggle="modal" data-bs-target="#modal-cart">
+                            Кошик <i class="fas fa-shopping-cart"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                <!-- <span class="visually-hidden">unread messages</span> -->
+                                <span class="cart-item-count">0</span> <!-- Додано новий span для кількості товарів -->
+                            </span>
+                        </button>
                     </li>
                     <li class="nav-item"> <!-- Like icon -->
                         <a class="nav-link" href="#" data-bs-toggle="modal">
@@ -84,7 +88,7 @@
 
                             <!-- Шапка окна кошика -->
                             <div class="modal-header bg-secondary text-white">
-                                <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+                                <h5 class="modal-title" id="exampleModalLabel">Кошик</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
@@ -104,10 +108,10 @@
                                 </div>
                             </div>
 
-                            <!-- Стоимость заказа -->
+                            <!-- Вартість замовлення -->
                             <div class="cart-total">
                                 <p data-cart-delivery class="none cart-delivery">
-                                    <!-- <span class="small">Безкоштовна доставка при<br>замовленні <span >більше 600</span> грн.</span> -->
+                                    <!-- <span class="small">Замовлення <span >більше 600</span> грн.</span> -->
                                     <span class="h5 cart-chiping">Доставка:</span>
                                     <span class="delivery-cost">600 грн.</span><br>
                                 </p>
@@ -187,16 +191,18 @@
     </div>
 
     <!-- Повідомлення про товар -->
-    <div id="cart-notification">
-        <p>Товар додано в кошик</p>
+    <div class="alert alert-success" id="cart-notification" role="alert">
+        Товар додано в кошик
     </div>
-    
-    
+    <!-- <div id="cart-notification">
+        <p>Товар додано в кошик</p>
+    </div> -->
+
     <!-- Columns with products -->
     <section class="main-content">
         <div class="container">
             <div class="row" id="products-container">
-                
+
             </div>
         </div>
     </section>
