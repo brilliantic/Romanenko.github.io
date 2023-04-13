@@ -36,7 +36,7 @@ window.addEventListener('click', function (event) {
 			// Зібрані данні підставимо в шаблон для товара в кошику
 			const cartItemHTML = `
 						<div class="row  cart-item" data-id="${productInfo.id}">
-							<div class="col cart-item__top">
+							<div class="col w-100 cart-item__top">
 								<div class="cart-item__img">
 									<img src="${productInfo.imgSrc}" alt="${productInfo.title}">
 								</div>
@@ -49,16 +49,16 @@ window.addEventListener('click', function (event) {
 										<div class="items__control" data-action="minus">-</div>
 										<div class="items__current" data-counter="">${productInfo.counter}</div>
 										<div class="items__control" data-action="plus">+</div>
-										</div>
+									</div>
 										<div class="price cart-items-price">
 											<div class="price__currency">${productInfo.price}</div>
 										</div>
-									</div>
-									<div>
-										<button type="button" class="btn btn-sm btn-danger btn-remove-from-cart">
-											Remove
-										</button>
-									</div>
+								</div>
+								<div>
+									<button type="button" class="d-grid btn btn-sm btn-danger btn-remove-from-cart">
+										Видалити
+									</button>
+								</div>
 								<!-- // cart-item__details -->
 							</div>
 						</div>`;
