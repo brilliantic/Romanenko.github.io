@@ -26,21 +26,8 @@
 		if (parseInt(counter.innerText) > 1) {
 			// Змінюємо текст у лічильнику зменшуючи його на 1
 			counter.innerText = --counter.innerText;
-
 		} 
-		// else if (event.target.closest('.btn-remove-from-cart')) {
-		// 	// Перевірка на товар, який знаходиться в кошику
-		// 	// console.log('IN CART!!!!');
-		// 	// Удаляем товар из корзины
-		// 	// event.target.closest('.cart-item').remove();
-
-		// 	// Відображення статусу кошика Порожня / Повна
-		// 	toggleCartStatus();
-
-		// 	//// Перерахунок загальної вартості товарів у кошику
 			calcCartPriceAndDelivery();
-		// }
-
 	}
 
 	// Перевіряємо клік на + або - всередині коризини

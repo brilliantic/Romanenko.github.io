@@ -1,4 +1,9 @@
 @charset "UTF-8";
+:root {
+  /* Оголошення змінної зі значенням кольору */
+  --my-orange: #ef8605;
+}
+
 html {
   font-size: 16px;
 }
@@ -29,6 +34,32 @@ a:hover {
 }
 
 /* Header */
+/* login */
+.form-floating label {
+  margin: 0 10px;
+}
+
+.terms-of-use {
+  height: 1.25rem;
+  font-size: 18px;
+  color: #159917;
+}
+.terms-of-use:hover {
+  top: 5;
+  color: #0e7010;
+}
+
+.link-login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* //login */
 .navbar-light .navbar-nav .nav-link {
   color: #111;
   font-weight: 500;
@@ -49,12 +80,19 @@ a:hover {
           transform: scale(1.1);
 }
 
+.dropdown-item {
+  border-radius: 20px;
+}
+.dropdown-item:active {
+  background-color: var(--my-orange);
+}
+
 .top-menu li a::after {
   content: "";
   display: block;
   width: 100%;
   background-color: #111;
-  height: 1px;
+  height: 0.0625rem;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
@@ -76,6 +114,12 @@ a:hover {
           transform: scale(1.2);
 }
 
+.my-dropdown-menu {
+  border: 0;
+  border-radius: 1.25rem;
+}
+
+/* Додати плавні переходи для випадаючого списку */
 /* Cart */
 .cart-item {
   margin-bottom: 0.625rem;
@@ -96,17 +140,38 @@ a:hover {
 .cart-total .cart-delivery {
   color: rgba(102, 102, 102, 0.831372549);
 }
+.cart-total .cart-delivery:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
 .cart-total .delivery-cost {
   margin-right: 1.875rem;
-  color: #ef8605;
+  color: var(--my-orange);
 }
-.cart-total .total-price {
-  color: #ef8605;
+.cart-total .total-price,
+.cart-total .text-total-price {
+  color: var(--my-orange);
   font-weight: 900;
   font-size: 30px;
+  margin-right: 5px;
 }
 
-#cart-notification {
+@media (max-width: 368) {
+  .delivery-cost {
+    font-size: 12px;
+  }
+}
+.alert-registered {
+  z-index: 0;
+  z-index: 0;
+  font-size: 44px;
+}
+
+#cart-notification,
+#account-is-registered {
   position: fixed;
   top: 20%;
   left: 50%;
@@ -114,26 +179,19 @@ a:hover {
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   height: 50px;
-  background-color: #a4a4a4;
-  color: #fff;
+  color: #000;
   font-size: 26px;
-  padding: 0 10px;
-  border: 2px solid #ef8605;
+  padding: 0.3125rem 0.625rem;
+  border: 2px solid var(--my-orange);
   border-radius: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   /* Встановлюємо базовий стиль повідомлення */
   display: none;
   opacity: 0;
   /* Додавамо з-за наявних елементів на сторінці */
   z-index: 1;
-  /* Встановлюємо властивості анімації */
-  -webkit-animation: fadeInOut 1s ease-in-out;
-          animation: fadeInOut 1s ease-in-out;
+  /* Встановлюємо тривалість анімації і тип функції розповсюдження */
+  -webkit-animation: fadeInOut 3s ease-in-out;
+          animation: fadeInOut 3s ease-in-out;
 }
 
 /* Визначаємо анімацію з'явлення і зникнення */
@@ -165,15 +223,9 @@ a:hover {
     opacity: 0;
   }
 }
-/* Встановлюємо тривалість анімації і тип функції розповсюдження */
-#cart-notification {
-  -webkit-animation: fadeInOut 3s ease-in-out;
-          animation: fadeInOut 3s ease-in-out;
-}
-
 .alert {
   font-size: 24px;
-  color: #ef8605;
+  color: var(--my-orange);
   text-align: center;
 }
 
@@ -222,31 +274,6 @@ a:hover {
   max-width: 6.25rem;
 }
 
-@media (max-width: 991px) {
-  .modal-body .cart-item__top {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    margin-left: 0;
-  }
-  .navbar-collapse {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    padding: 0 20%;
-  }
-  .btn-remove-from-cart {
-    margin-right: 0;
-  }
-  .counter-wrapper {
-    width: 1.25rem;
-    height: 1.875rem;
-    margin-right: 1.125rem;
-  }
-}
 .btn-remove-from-cart {
   margin-right: 3.125rem;
 }
@@ -260,8 +287,45 @@ a:hover {
   width: 12.5rem;
 }
 
+@media (max-width: 991px) {
+  .modal-body .cart-item__top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-left: 0;
+  }
+  .navbar-collapse {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 20%;
+  }
+  .btn-remove-from-cart {
+    margin-right: 0;
+  }
+  .counter-pm-price {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .counter-wrapper {
+    width: 1.25rem;
+    height: 1.875rem;
+    margin-right: 1.125rem;
+  }
+}
+@media (max-width: 500px) {
+  .cart-total {
+    padding: 0 5%;
+  }
+  .small-over-600 {
+    font-size: 0.75rem;
+  }
+}
 /* //Cart */
-/* /Header */
+/* //Header */
 /* Carousel */
 .my-carousel {
   padding: 0;
@@ -302,7 +366,7 @@ a:hover {
       -ms-flex-pack: center;
           justify-content: center;
   height: 12.5rem;
-  padding: 1.25rem;
+  padding: 0.3125rem;
 }
 .product-thumb img {
   max-width: 100%;
@@ -339,7 +403,7 @@ a:hover {
 
 .all-prices {
   font-size: 18px;
-  color: #ef8605;
+  color: var(--my-orange);
   font-weight: 600;
 }
 .all-prices small {
@@ -363,7 +427,7 @@ a:hover {
           transition-duration: 0.5s;
 }
 .product-links a:hover {
-  color: #ef8605;
+  color: var(--my-orange);
   -webkit-transform: scale(1.2);
       -ms-transform: scale(1.2);
           transform: scale(1.2);
@@ -409,7 +473,8 @@ a:hover {
     font-size: 18px;
   }
   .cart-item__title {
-    margin-left: 0;
+    width: 40%;
+    margin-left: 0.3125rem;
     font-size: 18px;
   }
   .cart-item__top {
@@ -435,7 +500,7 @@ a:hover {
           transition-duration: 0.5s;
 }
 .items__control:hover {
-  background-color: #ef8605;
+  background-color: var(--my-orange);
 }
 
 @media (max-width: 1200px) {
@@ -445,9 +510,11 @@ a:hover {
   }
 }
 @media (max-width: 598px) {
-  #cart-notification {
+  #cart-notification,
+  #account-is-registered {
     font-size: 14px;
-    height: 30px;
+    height: 40px;
+    padding: 0.375rem 0.625rem;
   }
 }
 /* //product card */

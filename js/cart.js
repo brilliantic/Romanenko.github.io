@@ -44,7 +44,7 @@ window.addEventListener('click', function (event) {
 								${productInfo.title}
 								</div>
 								<!-- cart-item__details -->
-								<div>
+								<div class="counter-pm-price">
 									<div class="items items--small counter-wrapper">
 										<div class="items__control" data-action="minus">-</div>
 										<div class="items__current" data-counter="">${productInfo.counter}</div>
@@ -77,9 +77,6 @@ window.addEventListener('click', function (event) {
 				const cartItem = event.target.closest('.cart-item');
 				// Видаляємо цей рядок з кошику
 				cartItem.remove();
-
-				// Відображення статусу кошика Порожня / Повна
-				// toggleCartStatus();
 			}
 		});
 	}

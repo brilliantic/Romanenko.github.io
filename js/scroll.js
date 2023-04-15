@@ -1,15 +1,12 @@
-
 // Відміна автоматичного скролінгу до верху сторінки
-document.addEventListener('click', function (event) {
-    event.preventDefault();
-});
+// document.addEventListener('click', function (event) {
+//     event.preventDefault();
+// });
 
 // Отримуємо посилання на кнопку за її ідентифікатором
 const scrollDelivery = document.getElementById('scrollDelivery');
 const scrollToHome = document.getElementById('scroll-to-home');
 const scrollSushi = document.getElementById('scrollSushi');
-
-console.log(scrollToHome)
 
 // Додаємо обробник події "click" до кнопки
 scrollDelivery.addEventListener('click', function () {

@@ -3,7 +3,7 @@ const navbar = document.querySelector('.my-header-navbar');
 const cartLink = document.querySelector('.item-nav-cart');
 const modalCart = document.querySelector('#modal-cart');
 
-// Функція для вимкнення класу sticky-top
+// Функція для вимкнення класу sticky-top для відкриванні кошику
 function disableStickyTop() {
     navbar.classList.remove('sticky-top');
 }
