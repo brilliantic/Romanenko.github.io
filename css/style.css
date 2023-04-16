@@ -49,6 +49,16 @@ a:hover {
   color: #0e7010;
 }
 
+.modal-title {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .link-login {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -57,6 +67,15 @@ a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.registration-modal-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 /* //login */
@@ -69,6 +88,18 @@ a:hover {
 .navbar-nav .dropdown-menu {
   right: 0;
   left: auto;
+}
+
+.my-nav-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+.my-nav-item:nth-child(1) {
+  padding-left: 20px;
 }
 
 .nav-link:hover {
@@ -164,14 +195,15 @@ a:hover {
     font-size: 12px;
   }
 }
-.alert-registered {
-  z-index: 0;
+.alert-registered,
+.alert-login {
   z-index: 0;
   font-size: 44px;
 }
 
 #cart-notification,
-#account-is-registered {
+#account-is-registered,
+#account-is-login {
   position: fixed;
   top: 20%;
   left: 50%;
@@ -184,10 +216,8 @@ a:hover {
   padding: 0.3125rem 0.625rem;
   border: 2px solid var(--my-orange);
   border-radius: 20px;
-  /* Встановлюємо базовий стиль повідомлення */
   display: none;
   opacity: 0;
-  /* Додавамо з-за наявних елементів на сторінці */
   z-index: 1;
   /* Встановлюємо тривалість анімації і тип функції розповсюдження */
   -webkit-animation: fadeInOut 3s ease-in-out;

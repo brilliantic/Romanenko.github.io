@@ -10,7 +10,6 @@ window.addEventListener('click', function (event) {
 		// Знаходимо карточку з товаром, в середині якої був зробленний клік
 		const card = event.target.closest('.card');
 		// console.log('click for cart');
-		// console.log(card);
 
 
 		// Збираємо данні з цього товару та записуємо їх до єдинного обʼєкту productInfo

@@ -43,23 +43,18 @@
                     <li class="nav-item">
                         <a class="nav-link" id="scrollSushi" href="#">Суші</a>
                     </li>
-                    <li class="nav-item ">
+                    <li class="nav-item">
                         <a class="nav-link" id="scrollDelivery" href="#">Доставка</a>
                     </li>
                 </ul>
 
                 <!-- Icons -->
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item dropdown"> <!-- User icon + dropdown-list -->
+                    <li class="nav-item dropdown my-nav-item"> <!-- User icon + dropdown-list -->
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">
                             <i class="far fa-user"></i>
                         </a>
-                        <!-- <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Реєстрація &ensp;&ensp;&nbsp;<i
-                                        class="fas fa-user-edit"></i></a></li>
-                            <li><a class="dropdown-item" href="#">Авторизація &ensp;<i class="fas fa-user-plus"></i></a>
-                            </li>
-                        </ul> -->
+
                         <ul class="my-dropdown-menu dropdown-menu">
                             <li>
                                 <a class="dropdown-item" href="#" data-bs-toggle="modal"
@@ -74,7 +69,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item"> <!-- Cart icon -->
+                    <li class="nav-item my-nav-item"> <!-- Cart icon -->
                         <button type="button" class="nav-link item-nav-cart btn btn-light position-relative"
                             data-bs-toggle="modal" data-bs-target="#modal-cart">
                             Кошик <i class="fas fa-shopping-cart"></i>
@@ -84,12 +79,12 @@
                             </span>
                         </button>
                     </li>
-                    <li class="nav-item"> <!-- Like icon -->
+                    <li class="nav-item my-nav-item"> <!-- Like icon -->
                         <a class="nav-link" href="#" data-bs-toggle="modal">
                             <i class="fas fa-heart"></i>
                         </a>
                     </li>
-                    <li class="nav-item"> <!-- Icon search -->
+                    <li class="nav-item my-nav-item"> <!-- Icon search -->
                         <a class="nav-link" href="#">
                             <i class="fas fa-search"></i>
                         </a>
@@ -167,12 +162,12 @@
                         <div class="col form-floating mb-3">
                             <input type="text" class="form-control" id="registrationFirstName" placeholder="First name"
                                 aria-label="First name">
-                            <label class="registText" for="registrationTel"> *Ваше імʼя</label>
+                            <label class="registText"> *Ваше імʼя</label>
                         </div>
                         <div class="col form-floating mb-3">
                             <input type="text" class="form-control" id="registrationLastName" placeholder="Last name"
                                 aria-label="Last name">
-                            <label class="registText" for="registrationTel"> Ваше Прізвище</label>
+                            <label class="registText"> Ваше Прізвище</label>
                         </div>
                     </div>
 
@@ -216,12 +211,48 @@
                 </div>
                 <div class="modal-footer registration-modal-footer">
                     <button type="button" class="btn btn-success w-100 rounded-sm">Зареєструватись</button>
-                    <span class="link-login">Вже зареєстровані?&ensp;<a class="terms-of-use" href="#">Увійти</a></span>
+                    <span class="link-login">Вже зареєстровані?&ensp;<a class="terms-of-use" id="loginBtn" href="#">Увійти</a></span>
                 </div>
             </div>
         </div>
     </div>
     <!-- /Form registration -->
+
+    <!-- Form login -->
+    <div class="modal fade" id="loginModal" data-bs-target="#loginModal" tabindex="-1" aria-labelledby="loginModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header my-modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">ВХІД</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="col form-floating">
+                        <input type="tel" class="form-control" id="loginTel" placeholder="tel">
+                        <label class="registText" for="loginTel"> Ваш номер телефону</label>
+                    </div>
+                </div>
+
+                <div class="modal-body">
+                    <div class="col form-floating">
+                        <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+                        <label class="registText" for="floatingPassword">Ваш поточний пароль</label>
+                    </div>
+                </div>
+
+                <div class="modal-footer registration-modal-footer">
+                    <button type="button" class="btn btn-success w-100 rounded-sm">Увійти в кабінет</button>
+
+                    <span class="forgot-your-password"><a class="terms-of-use" href="#">Забули пароль?</a></span>
+                    <span class="link-registnracion"><a class="terms-of-use close-login" id="registrationBtn" href="#">Зареєстроуватись</a></span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Form login -->
 
     <!-- /Header -->
 
@@ -286,6 +317,9 @@
     <div class="alert alert-success alert-registered" id="account-is-registered" role="alert">
         Акаунт зареєстровано
     </div>
+    <div class="alert alert-success alert-login" id="account-is-login" role="alert">
+        Ви увійшли в кабінет
+    </div>
 
     <!-- Columns with products -->
     <section class="main-content">
@@ -304,16 +338,17 @@
                     <div class="col-md-3 col-6">
                         <h4>Information</h4>
                         <ul class="list-unstyled">
-                            <li><a href="#" id="scroll-to-home">Home</a></li>
-                            <li><a href="#">About the store</a></li>
-                            <li><a href="#">Payment and delivery</a></li>
-                            <li><a href="#">Contacts</a></li>
+                            <li><a href="#" id="scroll-to-home">Головна</a></li>
+                            <li><a href="#">Про магазин</a></li>
+                            <li><a href="#">Оплата та доставка</a></li>
+                            <li><a href="#">Контакти</a></li>
                         </ul>
                     </div>
                     <div class="col-md-3 col-6">
                         <h4>Working days</h4>
                         <ul class="list-unstyled">
-                            <li>3 Stepana Bandera St., Kyiv</li>
+                            <li><a href="https://www.google.com/maps/place/%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82+%D0%A1%D1%82%D0%B5%D0%BF%D0%B0%D0%BD%D0%B0+%D0%91%D0%B0%D0%BD%D0%B4%D0%B5%D1%80%D0%B8,+23,+%D0%9A%D0%B8%D1%97%D0%B2,+04655/@50.4898718,30.4956075,17z/data=!4m6!3m5!1s0x40d4cdf953e66b81:0xa97983168ec0777e!8m2!3d50.4898718!4d30.4956075!16s%2Fg%2F11csmpjp67"
+                                    target="_blank">проспект Степана Бандери, 23</a></li>
                             <li>N-S: 9:00 - 18:00</li>
                             <li>Without breaks</li>
                         </ul>
@@ -341,12 +376,7 @@
     </footer>
     <!-- /Footer -->
 
-
-
-
     <button class=""></button>
-
-
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

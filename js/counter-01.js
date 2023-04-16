@@ -1,4 +1,4 @@
-// Находим элементы на странице
+gi// Находим элементы на странице
 const btnMinus = document.querySelector('[data-action="minus"]');
 const btnPlus = document.querySelector('[data-action="plus"]');
 const counter = document.querySelector('[data-counter]');
