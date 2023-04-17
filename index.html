@@ -22,7 +22,7 @@
 
 <body>
 
-    <!-- Header -->
+    <!-- Header  sticky-top-->
     <nav class="navbar navbar-expand-lg  navbar-light bg-light my-header-navbar sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand logo" href="#">Суші-Їм</a> <!-- Logo -->
@@ -148,8 +148,8 @@
     </nav>
 
     <!-- Form registration -->
-    <div class="modal fade" id="registrationModal" data-bs-target="#registrationModal" tabindex="-1"
-        aria-labelledby="registrationModalLabel">
+    <div class="modal fade" id="registrationModal" tabindex="-1" aria-labelledby="registrationModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -160,41 +160,39 @@
 
                     <div class="row">
                         <div class="col form-floating mb-3">
-                            <input type="text" class="form-control" id="registrationFirstName" name="firstName"
-                                placeholder="First name" aria-label="First name">
-                            <label class="registText" for="registrationFirstName"> *Ваше імʼя</label>
-
+                            <input type="text" class="form-control" id="registrationFirstName" placeholder="First name"
+                                aria-label="First name">
+                            <label class="registText" type="submit"> *Ваше імʼя</label>
                         </div>
                         <div class="col form-floating mb-3">
-                            <input type="text" class="form-control" id="registrationLastName" name="lastName"
-                                placeholder="Last name" aria-label="Last name">
-                            <label class="registText" for="registrationLastName"> Ваше Прізвище</label>
-
+                            <input type="text" class="form-control" id="registrationLastName" placeholder="Last name"
+                                aria-label="Last name">
+                            <label class="registText" type="submit"> Ваше Прізвище</label>
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="col-md form-floating mb-3">
-                            <input type="email" name="email" class="form-control" id="registrationEmail"
+                        <div class="col form-floating mb-3">
+                            <input type="email" class="form-control" id="registrationEmail"
                                 placeholder="name@example.com">
-                            <label class="registText" for="registrationEmail">Ваш емейл</label>
+                            <label class="registText" for="registrationEmail" type="submit">Ваш емейл</label>
                         </div>
-                        <div class="col-md form-floating mb-3">
-                            <input type="tel" class="form-control" id="registrationTel" name="phone" placeholder="tel">
-                            <label class="registText" for="registrationTel"> *Ваш телефон</label>
+                        <div class="col form-floating mb-3">
+                            <input type="tel" class="form-control" id="registrationTel" placeholder="tel">
+                            <label class="registText" for="registrationTel" type="submit"> *Ваш телефон</label>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col form-floating mb-3">
-                            <input type="password" class="form-control" id="registrationPassword1" name="password1"
+                            <input type="password" class="form-control" id="registrationPassword1"
                                 placeholder="Password">
-                            <label class="registText" for="registrationPassword1">*Пароль</label>
+                            <label class="registText" for="floatingPassword" type="submit">*Пароль</label>
                         </div>
                         <div class="col form-floating">
-                            <input type="password" class="form-control" id="registrationPassword2" name="password2"
+                            <input type="password" class="form-control" id="registrationPassword2"
                                 placeholder="Password">
-                            <label class="registText" for="registrationPassword2">*Повторіть пароль</label>
+                            <label class="registText" for="floatingPassword" type="submit">*Повторіть пароль</label>
                         </div>
                     </div>
 
@@ -212,10 +210,8 @@
 
                 </div>
                 <div class="modal-footer registration-modal-footer">
-                    <button type="submit" class="btn btn-success w-100 rounded-sm">Зареєструватись</button>
-                    <span class="link-login">Вже зареєстровані?&ensp;
-                        <a class="terms-of-use" id="loginBtn" href="#">Увійти</a>
-                    </span>
+                    <button type="button" class="btn btn-success w-100 rounded-sm">Зареєструватись</button>
+                    <span class="link-login">Вже зареєстровані?&ensp;<a class="terms-of-use" id="loginBtn" href="#">Увійти</a></span>
                 </div>
             </div>
         </div>
@@ -234,92 +230,29 @@
 
                 <div class="modal-body">
                     <div class="col form-floating">
-                        <input type="tel" class="form-control" id="loginTel" name="email" placeholder="tel">
+                        <input type="tel" class="form-control" id="loginTel" placeholder="tel">
                         <label class="registText" for="loginTel"> Ваш номер телефону</label>
                     </div>
                 </div>
 
                 <div class="modal-body">
                     <div class="col form-floating">
-                        <input type="password" class="form-control" id="loginPassword" name="phone" placeholder="Password">
-                        <label class="registText" for="loginPassword">Ваш поточний пароль</label>
+                        <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+                        <label class="registText" for="floatingPassword">Ваш поточний пароль</label>
                     </div>
                 </div>
 
                 <div class="modal-footer registration-modal-footer">
                     <button type="button" class="btn btn-success w-100 rounded-sm">Увійти в кабінет</button>
 
-                    <span class="forgot-your-password"><a class="terms-of-use" id="forgotPassword" href="#">Забули
-                            пароль?</a></span>
-                    <span class="link-registnracion"><a class="terms-of-use close-login" id="registrationBtn"
-                            href="#">Зареєструватись</a></span>
+                    <span class="forgot-your-password"><a class="terms-of-use" href="#">Забули пароль?</a></span>
+                    <span class="link-registnracion"><a class="terms-of-use close-login" id="registrationBtn" href="#">Зареєстроуватись</a></span>
 
                 </div>
             </div>
         </div>
     </div>
     <!-- /Form login -->
-    
-    <!-- Form forgot password -->
-    <div class="modal fade" id="forgotPasswordModal" data-bs-target="#forgotPasswordModal" tabindex="-1"
-        aria-labelledby="loginModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header my-modal-header">
-                    <h5 class="modal-title" id="loginModalLabel">Відновити пароль</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <p class="forgot-password-text">Введіть ваш номер телефону і ми відправимо вам смс повідомленням з кодом
-                    для відновлення паролю</p>
-
-                <div class="modal-body">
-                    <div class="col form-floating">
-                        <input type="tel" class="form-control" id="forgoPasswordTel" name="phone" placeholder="tel">
-                        <label class="registText" for="forgoPasswordTel"> Ваш номер телефону</label>
-                    </div>
-                </div>
-
-                <div class="modal-footer registration-modal-footer">
-                    <button type="button" class="btn btn-success w-100 rounded-sm" id="passwordReset">Надіслати
-                        код</button>
-                    <span class="link-forgo-password link-login">Повернутись до&ensp;
-                        <a class="terms-of-use" id="loginBtnForgotPassword" href="#">Входу</a>
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /Form forgot password -->
-
-    <!-- Form Password reset -->
-    <div class="modal fade" id="passwordResetModal" data-bs-target="#passwordResetModal" tabindex="-1"
-        aria-labelledby="loginModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header my-modal-header">
-                    <h5 class="modal-title" id="loginModalLabel">Відновити пароль</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <p class="forgot-password-text">Введіть код який надіслано на вказаний мобільний телефон -</p>
-
-                <div class="modal-body">
-                    <div class="col form-floating">
-                        <input type="text" class="form-control" id="forgotPasswordTel" placeholder="tel">
-                        <label class="registText" for="forgotPasswordTel">*Введіть код</label>
-                    </div>
-                </div>
-
-                <div class="modal-footer registration-modal-footer">
-                    <button type="button" class="btn btn-success w-100 rounded-sm" id="passwordResetBtn">Відновити
-                        пароль</button>
-                    <span class="link-forgo-password link-login">Повернутись до&ensp;
-                        <a class="terms-of-use" id="passwordResetloginBtn" href="#">Входу</a>
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /Form Password reset -->
     <!-- /Header -->
 
     <!-- carousel -->
@@ -333,22 +266,16 @@
                     aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
                     aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-                    aria-label="Slide 4"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
-                    aria-label="Slide 5"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
-                    aria-label="Slide 6"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6"
-                    aria-label="Slide 7"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7"
-                    aria-label="Slide 8"></button>
+                <!-- <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                    aria-label="Slide 3"></button> -->
+                <!-- <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                    aria-label="Slide 3"></button> -->
             </div>
 
             <!-- FPhoto from the carousel -->
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="img/slider/10-slider.webp" class="d-block w-100" alt="sushi">
+                    <img src="img/slider/4-slider.jpeg" class="d-block w-100" alt="sushi">
                 </div>
                 <div class="carousel-item">
                     <img src="img/slider/2-slider.jpeg" class="d-block w-100" alt="sushi">
@@ -356,21 +283,12 @@
                 <div class="carousel-item">
                     <img src="img/slider/3-slider.jpeg" class="d-block w-100" alt="sushi">
                 </div>
-                <div class="carousel-item">
-                    <img src="img/slider/slider-1.jpeg" class="d-block w-100" alt="sushi">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/slider/slider-5.jpeg" class="d-block w-100" alt="sushi">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/slider/slider-6.jpeg" class="d-block w-100" alt="sushi">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/slider/slider-7.jpeg" class="d-block w-100" alt="sushi">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/slider/4-slider.jpeg" class="d-block w-100" alt="sushi">
-                </div>
+                <!-- <div class="carousel-item">
+                    <img src="img/slider/1-slider.jpeg" class="d-block w-100" alt="sushi">
+                </div> -->
+                <!-- <div class="carousel-item">
+                    <img src="img/slider/5-slider.jpeg" class="d-block w-100" alt="sushi">
+                </div> -->
             </div>
 
             <!-- Buttons on the slider  -->
@@ -388,22 +306,18 @@
             </button>
         </div>
     </div>
+    <!-- /carousel -->
 
     <!-- Повідомлення про товар -->
-    <div class="alert">
-        <div class="alert-product alert-success" id="cart-notification" role="alert">
-            Товар додано в кошик
-        </div>
-        <!-- Повідомлення при реєстрації -->
-        <div class="alert alert-success alert-registered" id="account-is-registered" role="alert">
-            Акаунт зареєстровано
-        </div>
-        <div class="alert alert-success alert-login" id="account-is-login" role="alert">
-            Ви увійшли в кабінет
-        </div>
-        <div class="alert alert-success alert-forgot-password" id="account-forgot-password" role="alert">
-            Код надіслано
-        </div>
+    <div class="alert-product alert-success" id="cart-notification" role="alert">
+        Товар додано в кошик
+    </div>
+    <!-- Повідомлення при реєстрації -->
+    <div class="alert alert-success alert-registered" id="account-is-registered" role="alert">
+        Акаунт зареєстровано
+    </div>
+    <div class="alert alert-success alert-login" id="account-is-login" role="alert">
+        Ви увійшли в кабінет
     </div>
     <!-- /Повідомлення про товар -->
 
@@ -423,7 +337,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 col-6">
-                        <h4>Соціальні мережі</h4>
+                        <h4>Information</h4>
                         <ul class="list-unstyled">
                             <li><a href="#" id="scroll-to-home">Головна</a></li>
                             <li><a href="#">Про магазин</a></li>
@@ -432,28 +346,28 @@
                         </ul>
                     </div>
                     <div class="col-md-3 col-6">
-                        <h4>Робочі дні</h4>
+                        <h4>Working days</h4>
                         <ul class="list-unstyled">
                             <li><a href="https://www.google.com/maps/place/%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82+%D0%A1%D1%82%D0%B5%D0%BF%D0%B0%D0%BD%D0%B0+%D0%91%D0%B0%D0%BD%D0%B4%D0%B5%D1%80%D0%B8,+23,+%D0%9A%D0%B8%D1%97%D0%B2,+04655/@50.4898718,30.4956075,17z/data=!4m6!3m5!1s0x40d4cdf953e66b81:0xa97983168ec0777e!8m2!3d50.4898718!4d30.4956075!16s%2Fg%2F11csmpjp67"
-                                    target="_blank">Проспект Степана Бандери, 23</a></li>
-                            <li>Пн-Нд: 9:00 - 22:00</li>
-                            <li>Без перерв</li>
+                                    target="_blank">проспект Степана Бандери, 23</a></li>
+                            <li>N-S: 9:00 - 18:00</li>
+                            <li>Without breaks</li>
                         </ul>
                     </div>
                     <div class="col-md-3 col-6">
-                        <h4>Соціальні мережі</h4>
+                        <h4>Contacts</h4>
                         <ul class="list-unstyled">
-                            <li><a href="tel:+380444443300">+38 044-444-33-00</a></li>
-                            <li><a href="tel:+380444442200">+38 044-444-22-00</a></li>
-                            <li><a href="tel:+380444441100">+38 044-444-11-00</a></li>
+                            <li><a href="tel:+380444443322">+38 044-444-33-00</a></li>
+                            <li><a href="tel:+380444443322">+38 044-444-22-00</a></li>
+                            <li><a href="tel:+380444443322">+38 044-444-11-00</a></li>
                         </ul>
                     </div>
                     <div class="col-md-3 col-6">
-                        <h4>Соціальні мережі</h4>
+                        <h4>Social networks</h4>
                         <div class="footer-icons">
                             <a href="#"><i class="fab fa-facebook-square"></i></a>
                             <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="https://t.me/jsFollower"><i class="fab fa-telegram-plane"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
                         </div>
                         </ul>
                     </div>
@@ -462,15 +376,13 @@
         </section>
     </footer>
     <!-- /Footer -->
-
     <!-- <button class=""></button> -->
 
-    <!-- bootstrap -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 
-    <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Підключення jQuery Mask Plugin для телефона -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
@@ -485,6 +397,7 @@
     <script src="js/scroll.js"></script>
     <script src="js/navUser.js"></script>
 
+    <!-- <script src="js/script.js"></script> -->
 </body>
 
 </html>
