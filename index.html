@@ -162,12 +162,12 @@
                         <div class="col form-floating mb-3">
                             <input type="text" class="form-control" id="registrationFirstName" placeholder="First name"
                                 aria-label="First name">
-                            <label class="registText"> *Ваше імʼя</label>
+                            <label class="registText" type="submit"> *Ваше імʼя</label>
                         </div>
                         <div class="col form-floating mb-3">
                             <input type="text" class="form-control" id="registrationLastName" placeholder="Last name"
                                 aria-label="Last name">
-                            <label class="registText"> Ваше Прізвище</label>
+                            <label class="registText" type="submit"> Ваше Прізвище</label>
                         </div>
                     </div>
 
@@ -175,11 +175,11 @@
                         <div class="col form-floating mb-3">
                             <input type="email" class="form-control" id="registrationEmail"
                                 placeholder="name@example.com">
-                            <label class="registText" for="registrationEmail">Ваш емейл</label>
+                            <label class="registText" for="registrationEmail" type="submit">Ваш емейл</label>
                         </div>
                         <div class="col form-floating mb-3">
                             <input type="tel" class="form-control" id="registrationTel" placeholder="tel">
-                            <label class="registText" for="registrationTel"> *Ваш телефон</label>
+                            <label class="registText" for="registrationTel" type="submit"> *Ваш телефон</label>
                         </div>
                     </div>
 
@@ -187,12 +187,12 @@
                         <div class="col form-floating mb-3">
                             <input type="password" class="form-control" id="registrationPassword1"
                                 placeholder="Password">
-                            <label class="registText" for="floatingPassword">*Пароль</label>
+                            <label class="registText" for="floatingPassword" type="submit">*Пароль</label>
                         </div>
                         <div class="col form-floating">
                             <input type="password" class="form-control" id="registrationPassword2"
                                 placeholder="Password">
-                            <label class="registText" for="floatingPassword">*Повторіть пароль</label>
+                            <label class="registText" for="floatingPassword" type="submit">*Повторіть пароль</label>
                         </div>
                     </div>
 
@@ -253,7 +253,6 @@
         </div>
     </div>
     <!-- /Form login -->
-
     <!-- /Header -->
 
     <!-- carousel -->
@@ -307,7 +306,7 @@
             </button>
         </div>
     </div>
-
+    <!-- /carousel -->
 
     <!-- Повідомлення про товар -->
     <div class="alert-product alert-success" id="cart-notification" role="alert">
@@ -320,6 +319,7 @@
     <div class="alert alert-success alert-login" id="account-is-login" role="alert">
         Ви увійшли в кабінет
     </div>
+    <!-- /Повідомлення про товар -->
 
     <!-- Columns with products -->
     <section class="main-content">
@@ -329,6 +329,7 @@
             </div>
         </div>
     </section>
+    <!-- /Columns with products -->
 
     <!-- Footer -->
     <footer>
@@ -375,8 +376,7 @@
         </section>
     </footer>
     <!-- /Footer -->
-
-    <button class=""></button>
+    <!-- <button class=""></button> -->
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
