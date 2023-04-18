@@ -49,21 +49,12 @@ a:hover {
   color: #0e7010;
 }
 
-.modal-title {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
+.modal-title,
 .link-login {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -78,6 +69,25 @@ a:hover {
           justify-content: space-between;
 }
 
+.forgot-password-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  padding: 0 10%;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.registText {
+  color: #666;
+}
+
+@media (max-width: 400px) {
+  .registText {
+    font-size: 12px;
+  }
+}
 /* //login */
 .navbar-light .navbar-nav .nav-link {
   color: #111;
@@ -150,7 +160,6 @@ a:hover {
   border-radius: 1.25rem;
 }
 
-/* Додати плавні переходи для випадаючого списку */
 /* Cart */
 .cart-item {
   margin-bottom: 0.625rem;
@@ -203,7 +212,8 @@ a:hover {
 
 #cart-notification,
 #account-is-registered,
-#account-is-login {
+#account-is-login,
+#account-forgot-password {
   position: fixed;
   top: 20%;
   left: 50%;
@@ -373,6 +383,10 @@ a:hover {
 
 /* /Carousel */
 /* product card */
+.main-content {
+  padding-top: 0;
+}
+
 .product-item {
   -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06);
           box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06);
