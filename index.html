@@ -158,61 +158,89 @@
                 </div>
                 <div class="modal-body">
 
-                    <div class="row">
-                        <div class="col form-floating mb-3">
-                            <input type="text" class="form-control" id="registrationFirstName" name="firstName"
-                                placeholder="First name" aria-label="First name">
-                            <label class="registText" for="registrationFirstName"> *Ваше імʼя</label>
-
-                        </div>
-                        <div class="col form-floating mb-3">
-                            <input type="text" class="form-control" id="registrationLastName" name="lastName"
-                                placeholder="Last name" aria-label="Last name">
-                            <label class="registText" for="registrationLastName"> Ваше Прізвище</label>
-
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md form-floating mb-3">
-                            <input type="email" name="email" class="form-control" id="registrationEmail"
-                                placeholder="name@example.com">
-                            <label class="registText" for="registrationEmail">Ваш емейл</label>
-                        </div>
-                        <div class="col-md form-floating mb-3">
-                            <input type="tel" class="form-control" id="registrationTel" name="phone" placeholder="tel">
-                            <label class="registText" for="registrationTel"> *Ваш телефон</label>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col form-floating mb-3">
-                            <input type="password" class="form-control" id="registrationPassword1" name="password1"
-                                placeholder="Password">
-                            <label class="registText" for="registrationPassword1">*Пароль</label>
-                        </div>
-                        <div class="col form-floating">
-                            <input type="password" class="form-control" id="registrationPassword2" name="password2"
-                                placeholder="Password">
-                            <label class="registText" for="registrationPassword2">*Повторіть пароль</label>
-                        </div>
-                    </div>
-
-                    <div class="form-check">
-                        <div class="privacy">
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                                <label class="form-check-label" for="flexSwitchCheckDefault">
-                                    Я погоджуюсь з
-                                    <a class="terms-of-use" href="./termsOfUse.html">правилами користування</a>
-                                </label>
+                    <form class="myForm" id="registrationForm" novalidate>
+                        <div class="row">
+                            <div class="col form-floating mb-3">
+                                <input type="text" class="form-control" id="registrationFirstName"
+                                    id="validationCustom01" name="firstName" placeholder="First name"
+                                    aria-label="First name" required>
+                                <label class="registText" for="registrationFirstName" for="validationCustom01"
+                                    class="form-label">
+                                    *Ваше імʼя</label>
+                            </div>
+                            <div class="col form-floating mb-3">
+                                <input type="text" class="form-control" id="registrationLastName" name="lastName"
+                                    placeholder="Last name" aria-label="Last name">
+                                <label class="registText" for="registrationLastName"> Ваше Прізвище</label>
                             </div>
                         </div>
-                    </div>
 
+                        <div class="row">
+                            <div class="col-md form-floating mb-3">
+                                <input type="email" name="email" class="form-control" id="registrationEmail"
+                                    placeholder="name@example.com" aria-describedby="emailHelp" required>
+                                <label class="registText" for="registrationEmail" class="form-label">
+                                    *Ваш емейл</label>
+                                <div class="valid-feedback">
+                                    Виглядає добре!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Введіть коректний email.
+                                </div>
+                            </div>
+
+                            <div class="col-md form-floating mb-3">
+                                <input type="tel" class="form-control" id="registrationTel" name="phone"
+                                    placeholder="tel" required>
+                                <label class="registText" for="registrationTel" class="form-label">
+                                    *Ваш телефон</label>
+                                <div class="valid-feedback">
+                                    Виглядає добре!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Введіть ваш телфон
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col form-floating mb-3">
+                                <input type="password" class="form-control" id="registrationPassword1" name="password1"
+                                    placeholder="Password" required>
+                                <label class="registText" class="form-label" required>*Пароль</label>
+                                <div class="invalid-feedback" id="incorrectPassword">
+                                    Паролі не співпадають
+                                </div>
+                            </div>
+                            <div class="col form-floating">
+                                <input type="password" class="form-control" id="registrationPassword2" name="password2"
+                                    placeholder="Password" required>
+                                <label class="registText" for="registrationPassword2" class="form-label"
+                                    required>*Повторіть пароль</label>
+                                <div class="invalid-feedback" id="correctPassword">
+                                    Введіть пароль від 8 до 20 символів
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-check">
+                            <div class="privacy">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault"
+                                        required>
+                                    <label class="form-check-label" for="flexSwitchCheckDefault">
+                                        Я погоджуюсь з
+                                        <a class="terms-of-use" href="./termsOfUse.html">правилами користування</a>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
                 <div class="modal-footer registration-modal-footer">
-                    <button type="submit" class="btn btn-success w-100 rounded-sm">Зареєструватись</button>
+                    <button disabled type="submit" id="registrationButton" class="btn btn-success w-100 rounded-sm">
+                        Зареєструватись
+                    </button>
                     <span class="link-login">Вже зареєстровані?&ensp;
                         <a class="terms-of-use" id="loginBtn" href="#">Увійти</a>
                     </span>
@@ -220,6 +248,7 @@
             </div>
         </div>
     </div>
+    </form>
     <!-- /Form registration -->
 
     <!-- Form login -->
@@ -241,7 +270,8 @@
 
                 <div class="modal-body">
                     <div class="col form-floating">
-                        <input type="password" class="form-control" id="loginPassword" name="phone" placeholder="Password">
+                        <input type="password" class="form-control" id="loginPassword" name="phone"
+                            placeholder="Password">
                         <label class="registText" for="loginPassword">Ваш поточний пароль</label>
                     </div>
                 </div>
@@ -259,7 +289,7 @@
         </div>
     </div>
     <!-- /Form login -->
-    
+
     <!-- Form forgot password -->
     <div class="modal fade" id="forgotPasswordModal" data-bs-target="#forgotPasswordModal" tabindex="-1"
         aria-labelledby="loginModalLabel" aria-hidden="true">
