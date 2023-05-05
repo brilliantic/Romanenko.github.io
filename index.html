@@ -135,9 +135,7 @@
 
                             <!-- Кнопки внизу кошика -->
                             <div class="modal-footer">
-                                <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Повернутись <i
-                                        class="fas fa-cart-plus"></i></button> -->
-                                <button type="submit" id="order-form" class="btn btn-success">
+                                <button type="submit" id="order-form" class="btn btn-success" data-bs-dismiss="modal">
                                     Замовити
                                     <i class="fas fa-wallet"></i>
                                 </button>
@@ -317,254 +315,252 @@
                 </div>
             </div>
         </div>
-        <!-- </form> -->
-        <!-- /Form login -->
+    </form>
+    <!-- /Form login -->
 
-        <!-- Form forgot password -->
-        <div class="modal fade" id="forgotPasswordModal" data-bs-target="#forgotPasswordModal" tabindex="-1"
-            aria-labelledby="loginModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header my-modal-header">
-                        <h5 class="modal-title" id="loginModalLabel">Відновити пароль</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <p class="forgot-password-text">
-                        Введіть ваш номер телефону і ми відправимо вам смс повідомленням з кодом для відновлення паролю
-                    </p>
-
-                    <div class="modal-body">
-                        <div class="col form-floating">
-                            <input type="tel" class="form-control" id="forgotPasswordTel" name="phone"
-                                placeholder="tel">
-                            <label class="registText" for="forgotPasswordTel">
-                                Ваш номер телефону
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="modal-footer registration-modal-footer">
-                        <button type="submit" class="btn btn-success w-100 rounded-sm" id="passwordReset">
-                            Надіслати код
-                        </button>
-                        <span class="link-forgo-password link-login">
-                            Повернутись до&ensp;
-                            <a class="terms-of-use" id="loginBtnForgotPassword" href="#">
-                                Входу
-                            </a>
-                        </span>
-                    </div>
+    <!-- Form forgot password -->
+    <div class="modal fade" id="forgotPasswordModal" data-bs-target="#forgotPasswordModal" tabindex="-1"
+        aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header my-modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Відновити пароль</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-            </div>
-        </div>
-        <!-- /Form forgot password -->
+                <p class="forgot-password-text">
+                    Введіть ваш номер телефону і ми відправимо вам смс повідомленням з кодом для відновлення паролю
+                </p>
 
-        <!-- Form Password reset -->
-        <div class="modal fade" id="passwordResetModal" data-bs-target="#passwordResetModal" tabindex="-1"
-            aria-labelledby="loginModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header my-modal-header">
-                        <h5 class="modal-title" id="loginModalLabel">Відновити пароль</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <p class="forgot-password-text">
-                        Введіть код який надіслано на вказаний мобільний телефон -
-                    </p>
-
-                    <div class="modal-body">
-                        <div class="col form-floating">
-                            <input type="text" class="form-control" id="forgotCodeTel" placeholder="tel">
-                            <label class="registText" for="forgotCodeTel">
-                                *Введіть код
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="modal-footer registration-modal-footer">
-                        <button type="submit" class="btn btn-success w-100 rounded-sm" id="passwordResetBtn">
-                            Відновити пароль
-                        </button>
-                        <span class="link-forgo-password link-login">
-                            Повернутись до&ensp;
-                            <a class="terms-of-use" id="passwordResetloginBtn" href="#">
-                                Входу
-                            </a>
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /Form Password reset -->
-        <!-- /Header -->
-
-        <!-- carousel -->
-        <div class="container-fluid my-carousel">
-            <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel"
-                data-bs-interval="2500">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                        class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-                        aria-label="Slide 4"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
-                        aria-label="Slide 5"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
-                        aria-label="Slide 6"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6"
-                        aria-label="Slide 7"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7"
-                        aria-label="Slide 8"></button>
-                </div>
-
-                <!-- FPhoto from the carousel -->
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="img/slider/10-slider.webp" class="d-block w-100" alt="sushi">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/slider/2-slider.jpeg" class="d-block w-100" alt="sushi">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/slider/3-slider.jpeg" class="d-block w-100" alt="sushi">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/slider/slider-1.jpeg" class="d-block w-100" alt="sushi">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/slider/slider-5.jpeg" class="d-block w-100" alt="sushi">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/slider/slider-6.jpeg" class="d-block w-100" alt="sushi">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/slider/slider-7.jpeg" class="d-block w-100" alt="sushi">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/slider/4-slider.jpeg" class="d-block w-100" alt="sushi">
+                <div class="modal-body">
+                    <div class="col form-floating">
+                        <input type="tel" class="form-control" id="forgotPasswordTel" name="phone" placeholder="tel">
+                        <label class="registText" for="forgotPasswordTel">
+                            Ваш номер телефону
+                        </label>
                     </div>
                 </div>
 
-                <!-- Buttons on the slider  -->
-                <!-- Left button -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <!-- button -->
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                <div class="modal-footer registration-modal-footer">
+                    <button type="submit" class="btn btn-success w-100 rounded-sm" id="passwordReset">
+                        Надіслати код
+                    </button>
+                    <span class="link-forgo-password link-login">
+                        Повернутись до&ensp;
+                        <a class="terms-of-use" id="loginBtnForgotPassword" href="#">
+                            Входу
+                        </a>
+                    </span>
+                </div>
             </div>
         </div>
+    </div>
+    <!-- /Form forgot password -->
 
-        <!-- Повідомлення про товар -->
-        <div class="alert">
-            <div class="alert-product alert-success" id="cart-notification" role="alert">
-                Товар додано в кошик
-            </div>
-            <!-- Повідомлення при реєстрації -->
-            <div class="alert alert-success alert-registered" id="account-is-registered" role="alert">
-                Акаунт зареєстровано
-            </div>
-            <div class="alert alert-success alert-login" id="account-is-login" role="alert">
-                Ви увійшли в кабінет
-            </div>
-            <div class="alert alert-success alert-forgot-password" id="account-forgot-password" role="alert">
-                Код надіслано
-            </div>
-            <div class="alert alert-success alert-order-received" id="orderReceived" role="alert">
-                Замовлення сформовано!
-                <!-- <br> Очикуйте дзвінка менеджера -->
+    <!-- Form Password reset -->
+    <div class="modal fade" id="passwordResetModal" data-bs-target="#passwordResetModal" tabindex="-1"
+        aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header my-modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Відновити пароль</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <p class="forgot-password-text">
+                    Введіть код який надіслано на вказаний мобільний телефон -
+                </p>
+
+                <div class="modal-body">
+                    <div class="col form-floating">
+                        <input type="text" class="form-control" id="forgotCodeTel" placeholder="tel">
+                        <label class="registText" for="forgotCodeTel">
+                            *Введіть код
+                        </label>
+                    </div>
+                </div>
+
+                <div class="modal-footer registration-modal-footer">
+                    <button type="submit" class="btn btn-success w-100 rounded-sm" id="passwordResetBtn">
+                        Відновити пароль
+                    </button>
+                    <span class="link-forgo-password link-login">
+                        Повернутись до&ensp;
+                        <a class="terms-of-use" id="passwordResetloginBtn" href="#">
+                            Входу
+                        </a>
+                    </span>
+                </div>
             </div>
         </div>
-        <!-- /Повідомлення про товар -->
+    </div>
+    <!-- /Form Password reset -->
+    <!-- /Header -->
 
-        <!-- Columns with products -->
-        <section class="main-content">
+    <!-- carousel -->
+    <div class="container-fluid my-carousel">
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel"
+            data-bs-interval="2500">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                    aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+                    aria-label="Slide 6"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6"
+                    aria-label="Slide 7"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7"
+                    aria-label="Slide 8"></button>
+            </div>
+
+            <!-- FPhoto from the carousel -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/slider/10-slider.webp" class="d-block w-100" alt="sushi">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/slider/2-slider.jpeg" class="d-block w-100" alt="sushi">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/slider/3-slider.jpeg" class="d-block w-100" alt="sushi">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/slider/slider-1.jpeg" class="d-block w-100" alt="sushi">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/slider/slider-5.jpeg" class="d-block w-100" alt="sushi">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/slider/slider-6.jpeg" class="d-block w-100" alt="sushi">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/slider/slider-7.jpeg" class="d-block w-100" alt="sushi">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/slider/4-slider.jpeg" class="d-block w-100" alt="sushi">
+                </div>
+            </div>
+
+            <!-- Buttons on the slider  -->
+            <!-- Left button -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <!-- button -->
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Повідомлення про товар -->
+    <div class="alert">
+        <div class="alert-product alert-success" id="cart-notification" role="alert">
+            Товар додано в кошик
+        </div>
+        <!-- Повідомлення при реєстрації -->
+        <div class="alert alert-success alert-registered" id="account-is-registered" role="alert">
+            Акаунт зареєстровано
+        </div>
+        <div class="alert alert-success alert-login" id="account-is-login" role="alert">
+            Ви увійшли в кабінет
+        </div>
+        <div class="alert alert-success alert-forgot-password" id="account-forgot-password" role="alert">
+            Код надіслано
+        </div>
+        <div class="alert alert-success alert-order-received" id="orderReceived" role="alert">
+            Замовлення сформовано!
+            <!-- <br> Очикуйте дзвінка менеджера -->
+        </div>
+    </div>
+    <!-- /Повідомлення про товар -->
+
+    <!-- Columns with products -->
+    <section class="main-content">
+        <div class="container">
+            <div class="row" id="products-container">
+
+            </div>
+        </div>
+    </section>
+    <!-- /Columns with products -->
+
+    <!-- Footer -->
+    <footer>
+        <section class="footer">
             <div class="container">
-                <div class="row" id="products-container">
-
+                <div class="row">
+                    <div class="col-md-3 col-6">
+                        <h4>Соціальні мережі</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="#" id="scroll-to-home">Головна</a></li>
+                            <li><a href="#">Про магазин</a></li>
+                            <li><a href="#">Оплата та доставка</a></li>
+                            <li><a href="#">Контакти</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <h4>Робочі дні</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="https://www.google.com/maps/place/%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82+%D0%A1%D1%82%D0%B5%D0%BF%D0%B0%D0%BD%D0%B0+%D0%91%D0%B0%D0%BD%D0%B4%D0%B5%D1%80%D0%B8,+23,+%D0%9A%D0%B8%D1%97%D0%B2,+04655/@50.4898718,30.4956075,17z/data=!4m6!3m5!1s0x40d4cdf953e66b81:0xa97983168ec0777e!8m2!3d50.4898718!4d30.4956075!16s%2Fg%2F11csmpjp67"
+                                    target="_blank">Проспект Степана Бандери, 23</a></li>
+                            <li>Пн-Нд: 9:00 - 22:00</li>
+                            <li>Без перерв</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <h4>Соціальні мережі</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="tel:+380444443300">+38 044-444-33-00</a></li>
+                            <li><a href="tel:+380444442200">+38 044-444-22-00</a></li>
+                            <li><a href="tel:+380444441100">+38 044-444-11-00</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <h4>Соціальні мережі</h4>
+                        <div class="footer-icons">
+                            <a href="#"><i class="fab fa-facebook-square"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="https://t.me/jsFollower"><i class="fab fa-telegram-plane"></i></a>
+                        </div>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
-        <!-- /Columns with products -->
+    </footer>
+    <!-- /Footer -->
 
-        <!-- Footer -->
-        <footer>
-            <section class="footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-3 col-6">
-                            <h4>Соціальні мережі</h4>
-                            <ul class="list-unstyled">
-                                <li><a href="#" id="scroll-to-home">Головна</a></li>
-                                <li><a href="#">Про магазин</a></li>
-                                <li><a href="#">Оплата та доставка</a></li>
-                                <li><a href="#">Контакти</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-3 col-6">
-                            <h4>Робочі дні</h4>
-                            <ul class="list-unstyled">
-                                <li><a href="https://www.google.com/maps/place/%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82+%D0%A1%D1%82%D0%B5%D0%BF%D0%B0%D0%BD%D0%B0+%D0%91%D0%B0%D0%BD%D0%B4%D0%B5%D1%80%D0%B8,+23,+%D0%9A%D0%B8%D1%97%D0%B2,+04655/@50.4898718,30.4956075,17z/data=!4m6!3m5!1s0x40d4cdf953e66b81:0xa97983168ec0777e!8m2!3d50.4898718!4d30.4956075!16s%2Fg%2F11csmpjp67"
-                                        target="_blank">Проспект Степана Бандери, 23</a></li>
-                                <li>Пн-Нд: 9:00 - 22:00</li>
-                                <li>Без перерв</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-3 col-6">
-                            <h4>Соціальні мережі</h4>
-                            <ul class="list-unstyled">
-                                <li><a href="tel:+380444443300">+38 044-444-33-00</a></li>
-                                <li><a href="tel:+380444442200">+38 044-444-22-00</a></li>
-                                <li><a href="tel:+380444441100">+38 044-444-11-00</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-3 col-6">
-                            <h4>Соціальні мережі</h4>
-                            <div class="footer-icons">
-                                <a href="#"><i class="fab fa-facebook-square"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="https://t.me/jsFollower"><i class="fab fa-telegram-plane"></i></a>
-                            </div>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </footer>
-        <!-- /Footer -->
+    <!-- <button class=""></button> -->
 
-        <!-- <button class=""></button> -->
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 
-        <!-- bootstrap -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-            crossorigin="anonymous"></script>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Підключення jQuery Mask Plugin для телефона -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
 
-        <!-- jquery -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <!-- Підключення jQuery Mask Plugin для телефона -->
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
-
-        <script src="js/authorization.js"></script>
-        <script src="js/calcCartPrice.js"></script>
-        <script src="js/toggleCartStatus.js"></script>
-        <script src="js/cart.js"></script>
-        <script src="js/navbar.js"></script>
-        <script src="js/counter-02.js"></script>
-        <script src="js/renderProducts.js"></script>
-        <script src="js/scroll.js"></script>
-        <script src="js/navUser.js"></script>
+    <script src="js/authorization.js"></script>
+    <script src="js/calcCartPrice.js"></script>
+    <script src="js/toggleCartStatus.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/counter-02.js"></script>
+    <script src="js/renderProducts.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/navUser.js"></script>
 
 </body>
 

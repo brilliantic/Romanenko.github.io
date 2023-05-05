@@ -40,10 +40,10 @@ $(document).ready(function () {
     });
 
     // При натисканні на кнопку "Увійти в кабінет"
-    // $("#loginModal").on("click", ".btn-success", function () {
-    //     closeModal("#loginModal");
-    //     showSuccessMessage("#account-is-login");
-    // });
+    $("#loginModal").on("click", ".btn-success", function () {
+        closeModal("#loginModal");
+        showSuccessMessage("#account-is-login");
+    });
 
     // При натисканні на кнопку "Зареєструватись" з вікна "входу"
     $("#registrationBtn").on("click", function () {
@@ -81,9 +81,11 @@ $(document).ready(function () {
         showSuccessMessage("#account-forgot-password");
     });
 
-    // При натискані на кнопку "Замовити" у кошику, вікно закривається, кошик очіщується та зʼявляється повідоблення
+    /* CART!
+    При натискані на кнопку "Замовити" у кошику, вікно закривається, кошик очіщується та зʼявляється повідоблення */
     $("#order-form").on("click", function () {
-        closeModal("#modal-cart");
+        modalBody.innerHTML = ''; // очищення кошика
+        $("#modal-cart").modal('hide'); // закриття модального вікна
         showSuccessMessage("#orderReceived");
     });
 });
