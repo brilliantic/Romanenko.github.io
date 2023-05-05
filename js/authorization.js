@@ -23,16 +23,15 @@ $(document).ready(function () {
         modalInstance.show();
     }
 
-    // При натисканні на кнопку "Зареєструватись"
+    // При натисканні на кнопку "Зареєструватись" з вікна "реєстрації"
+    $("#registrationForm").on("submit", function () {
+        closeModal("#registrationModal");
+        showSuccessMessage("#account-is-registered");
+    });
     // $("#registrationModal").on("click", ".btn-success", function () {
-    //     // closeModal("#registrationModal");
-    //     showSuccessMessage("#account-is-registered");
-    // });
-    // $("#registrationForm").on("submit", function () {
     //     closeModal("#registrationModal");
     //     showSuccessMessage("#account-is-registered");
     // });
-
 
     // При натисканні на кнопку "Увійти" з вікна реєстрації
     $("#loginBtn").on("click", function () {
@@ -41,18 +40,18 @@ $(document).ready(function () {
     });
 
     // При натисканні на кнопку "Увійти в кабінет"
-    $("#loginModal").on("click", ".btn-success", function () {
-        closeModal("#loginModal");
-        showSuccessMessage("#account-is-login");
-    });
+    // $("#loginModal").on("click", ".btn-success", function () {
+    //     closeModal("#loginModal");
+    //     showSuccessMessage("#account-is-login");
+    // });
 
-    // При натисканні на кнопку "Зареєструватись"
+    // При натисканні на кнопку "Зареєструватись" з вікна "входу"
     $("#registrationBtn").on("click", function () {
         closeModal("#loginModal");
         openModal("registrationModal");
     });
 
-    // При натискані на кнопку "Забув пароль"
+    // При натискані на кнопку "Забув пароль" з вікна "входу"
     $("#forgotPassword").on("click", function () {
         closeModal("#loginModal");
         openModal("forgotPasswordModal");
@@ -81,6 +80,12 @@ $(document).ready(function () {
         closeModal("#passwordResetModal");
         showSuccessMessage("#account-forgot-password");
     });
+
+    // При натискані на кнопку "Замовити" у кошику, вікно закривається, кошик очіщується та зʼявляється повідоблення
+    $("#order-form").on("click", function () {
+        closeModal("#modal-cart");
+        showSuccessMessage("#orderReceived");
+    });
 });
 
 
@@ -88,7 +93,7 @@ $(document).ready(function () {
 (function () {
     'use strict'
 
-    const forms = document.querySelectorAll('.myForm')
+    const forms = document.querySelectorAll('.formRegistration')
 
     Array.prototype.slice.call(forms)
         .forEach(function (form) {
@@ -130,3 +135,33 @@ password2.addEventListener('input', updatePasswordValidity);
 
 document.getElementById('registrationForm').addEventListener('input', updateFormValidity);
 /** <--- Перевірка на валідність данних та коректність паролів ---> */
+
+
+// Очіщуємо форму реєстрації
+const registrationForm = document.getElementById("registrationForm");
+registrationForm.addEventListener("submit", (e) => {
+    // e.preventDefault(); // перешкоджає відправці форми на сервер
+
+    // код для обробки відправки форми
+    // наприклад, відправка запиту на сервер з даними форми
+
+    // очищення полів форми
+    registrationForm.reset();
+});
+
+// const loginForm = document.getElementById("autorizationForm");
+// const loginBtn = document.getElementById("loginBtn");
+
+// const loginTel = document.getElementById('loginTel');
+// const loginPassword = document.getElementById('loginPassword');
+
+// const updateLoginFormValidity = () => {
+//     const isFormValid = document.getElementById('autorizationForm').checkValidity();
+//     document.getElementById('loginBtn').disabled = !isFormValid;
+//     console.log('code OK')
+// };
+
+// loginTel.addEventListener('input', updateLoginFormValidity);
+// loginPassword.addEventListener('input', updateLoginFormValidity);
+
+// document.getElementById('autorizationForm').addEventListener('input', updateLoginFormValidity);

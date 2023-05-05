@@ -213,7 +213,8 @@ a:hover {
 #cart-notification,
 #account-is-registered,
 #account-is-login,
-#account-forgot-password {
+#account-forgot-password,
+#orderReceived {
   position: fixed;
   top: 20%;
   left: 50%;
